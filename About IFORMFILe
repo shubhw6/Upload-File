@@ -1,0 +1,1 @@
+ASP.NET Core has introduced an IFormFile interface that represents transmitted files in an HTTP request. The interface gives us access to metadata like ContentDisposition, ContentType, Length, FileName, and more. IFormFile also provides some methods used to store files. The IFormFile interface also allows us to read the contents of a file via an accessible Stream.
