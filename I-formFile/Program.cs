@@ -22,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=FileUpload}/{action=Index}/{id?}");
+    pattern: "{controller=FileUpload}/{action=MultiplFileUpload}/{id?}"); 
 
 app.Run();

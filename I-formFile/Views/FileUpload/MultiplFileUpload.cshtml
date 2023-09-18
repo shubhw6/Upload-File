@@ -1,0 +1,34 @@
+﻿@model MultipleFileUpload
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Multiple File Upload</h1>
+<hr />
+<form asp-action="MultipleFileSave" asp-controller="FileUpload" method="post" enctype="multipart/form-data">
+    @if (Model.IsSuccess)
+    {
+        <div class="alert alert-success">
+            @Model.Message
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger">
+            @Model.Message
+        </div>
+    }
+
+    <div class="row mt-2">
+        <div class="col-12">
+            Select Multiple File<br />
+            <input asp-for="Files" class="form-control" />
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-success">Upload File</button>
+        </div>
+    </div>
+
+</form>
+
+
